@@ -12,7 +12,7 @@
 
 import time
 
-i = 1
+i = 0
 name = raw_input("Please, enter your name: ")
 age = int(raw_input("Please, enter your age: "))
 many = int(raw_input("How many times would you like to print? "))
@@ -21,6 +21,6 @@ left_to_100 = int(100 - age)
 total_age = year + left_to_100
 
 if many > 0:
-	while i <= many:
+	while i < many:
 		print ("Dear " + name + ", you will turn 100 years old in " + str(total_age))
 		i += 1
