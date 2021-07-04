@@ -13,7 +13,7 @@ num = int(raw_input("Please, enter the first number: "))
 check = int(raw_input("Please, enter the second number: "))
 
 if (num % check) == 0:
-	print("First and second num divide evenly into num ")
+	print("First and second num divide evenly into num")
 else:
 	if (num % 2) == 0:
 		if (num % 4) == 0:
