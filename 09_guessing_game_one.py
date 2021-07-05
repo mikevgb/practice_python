@@ -13,16 +13,14 @@
 import random
 import os
 
-random = random.randint(1,9)
-
-user_input = raw_input("Please, enter a number between 1 and 9: ")
-
-if user_input == str("exit"):
-	exit()
-if int(user_input) > random:
-	print ("Too high")
-if int(user_input) < random:
-	print ("Too low")
-if int(user_input) == random:
-	print ("Exactly")
-os.system("python 09_guessing_game_one.py 1")
+while True:
+	random_num = random.randint(1,9)
+	user_input = raw_input("Please, enter a number between 1 and 9: ")
+	if user_input == str("exit"):
+		exit()
+	if int(user_input) > random_num:
+		print ("Too high")
+	elif int(user_input) < random_num:
+		print ("Too low")
+	elif int(user_input) == random_num:
+		print ("Exactly")

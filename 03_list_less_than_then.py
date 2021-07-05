@@ -14,11 +14,11 @@
 # the original list a that are smaller than that number given by the user.
 
 a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-list = []
+lista = []
 num = int(raw_input("Please, enter a number: "))
 
 for number in a:
 	if number < num:
-		list.append(number)
+		lista.append(number)
 
-print(list)
+print(lista)
