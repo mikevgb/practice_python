@@ -26,18 +26,24 @@
 
 import random
 
-input_number = raw_input("Enter a number: ")
+def comp(input_number, my_num):
+	count = [0,0]
+	for i in range(len(my_num)):
+		if my_num[i] == input_number[i]:
+			count[0] += 1
+	for x in range(len(my_num)):
+		if input_number[x] in my_num and input_number[x] != my_num[x]:
+			count[1] += 1
+	return (count)
 
-my_num = random.randint(1000, 9999)
-splited_my_num = list(str(my_num))
-splited_input = list(str(input_number))
-
-i = 0
-
-while i < 4:
-	if splited_my_num[i] == splited_input[i]:
-		print ("bull")
-	i += 1
-
-print (splited_my_num)
-print (splited_input)
+if __name__=="__main__":
+	my_num = str(random.randint(1000, 9999))
+	print (my_num)
+	while True:
+		input_number = raw_input("Enter a number: ")
+		counter2 = comp(input_number, my_num)
+		print(str(counter2[1]) + " cows, " + str(counter2[0]) + " bulls")
+		if my_num == input_number:
+			print("You win")
+			break
+		
