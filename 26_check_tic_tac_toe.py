@@ -11,9 +11,10 @@
 
 # If a game of Tic Tac Toe is represented as a list of lists, like so:
 
-# game = [[1, 2, 0],
-# [2, 1, 0],
-# [2, 1, 1]]
+# game = 	[[1, 2, 0],
+# 			[2, 1, 0],
+# 			[2, 1, 1]]
+
 # where a 0 means an empty square, a 1 means that player 1 put their token 
 # in that space, and a 2 means that player 2 put their token in that space.
 
@@ -22,3 +23,65 @@
 # any. A Tic Tac Toe win is 3 in a row - either in a row, a column, or a 
 # diagonal. Don’t worry about the case where TWO people have won - assume that
 # in every board there will only be one winner.
+
+
+def check_rows(game, player_num, row):
+	x = 0
+	for i in game[row]:
+		if i == player_num:
+			x += 1
+	return x
+
+def check_col(game, player_num, row, col):
+	x = 0
+	for i in game[row][col]:
+		if i == player_num:
+			x += 1
+	return x
+
+def loop_col(i, player_num, cols, rows, results_cols, win_value):
+	while i <= 5:
+		results_cols.append(check_cols(game, player_num, rows, cols))
+		i += 1
+		rows = 0
+		if cols == 3:
+			player_num += 1
+			cols = 0
+		if player_num > 2:
+			print(results_cols)
+			break
+
+def loop_rows(i, player_num, rows, results_rows, win_value):
+	while i <= 5:
+		results_rows.append(check_rows(game, player_num, rows))
+		i += 1
+		rows += 1
+		if rows == 3:
+			player_num += 1
+			rows = 0
+		if player_num > 2:
+			print(results_rows)
+			break
+
+
+if __name__=="__main__":
+	rows = 0
+	cols = 0
+	i = 0
+	player_num = 1
+	results_cols = []
+	results_rows = []
+	win_value = 3
+
+	game = [[1, 2, 0],
+			[2, 1, 0],
+			[1, 1, 1]]
+	loop_rows(i, player_num, rows, results_rows, win_value)
+	i = 0
+	player_num = 1
+	loop_col(i, player_num, cols, rows, results_cols, win_value)
+
+
+00 01 02
+10 11 12
+20 21 22
