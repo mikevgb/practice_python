@@ -11,3 +11,9 @@
 # dictionary, and update the JSON file you have on disk with the scientist’s
 # name. If you run the program multiple times and keep adding new names, your
 # JSON file should keep getting bigger and bigger.
+
+import json
+
+with open("34.json", "r") as file_js:
+	data = file_js.readlines()
+	print(json.dumps(data, indent=4, sort_keys=True))
