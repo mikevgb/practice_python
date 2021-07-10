@@ -19,19 +19,22 @@
 
 def loop(original_num, user_input):
 	if user_input == "high":
-		sliced_num = round(original_num * 0.5)
+		sliced_num = original_num * 0.5
 		return sliced_num
 	if user_input == "low":
-		sliced_num = round(original_num * 1.5)
+		sliced_num = original_num * 1.5
 		return sliced_num
 
 
 if __name__=="__main__":
 	print ("Please, think of a number between 0 and 100")
 	original_num = 50
+	try_counter = 0
 	while True:
-		user_input = str(raw_input("Is your number " + str(original_num) + "? answer low, high, or yes > "))
+		try_counter += 1
+		user_input = str(raw_input("Is your number " + str(round(original_num)) + "? answer low, high, or yes > "))
 		original_num = loop(original_num, user_input)
 		if user_input == "yes":
 			print("hurray!")
+			print(">ONLY< " + str(try_counter) + " trys!")
 			break
