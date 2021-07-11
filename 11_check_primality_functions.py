@@ -4,7 +4,7 @@
 # opportunity to practice using functions, described below.
 
 def get_number(text):
-	return int(raw_input(text))
+	return int(input(text))
 
 num = get_number("Please, enter a number: ")
 x = range(1, num)

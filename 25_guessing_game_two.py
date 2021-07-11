@@ -32,7 +32,7 @@ if __name__=="__main__":
 	try_counter = 0
 	while True:
 		try_counter += 1
-		user_input = str(raw_input("Is your number " + str(round(original_num)) + "? answer low, high, or yes > "))
+		user_input = str(input("Is your number " + str(round(original_num)) + "? answer low, high, or yes > "))
 		original_num = loop(original_num, user_input)
 		if user_input == "yes":
 			print("hurray!")

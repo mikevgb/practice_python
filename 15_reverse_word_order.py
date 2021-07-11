@@ -10,7 +10,7 @@
 
 # shown back to me.
 
-input_string = raw_input("Please, enter a long string: ")
+input_string = input("Please, enter a long string: ")
 
 def split_string(input_string):
 	new_list = input_string.split( )

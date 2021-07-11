@@ -7,7 +7,7 @@
 #  where the next number in the sequence is the sum of the previous two numbers 
 #  in the sequence. The sequence looks like this: 1, 1, 2, 3, 5, 8, 13, …)
 
-num = int(raw_input("How many Fibonnaci numbers would you like to generate? "))
+num = int(input("How many Fibonnaci numbers would you like to generate? "))
 
 def fibo(n):
     if n < 2:

@@ -11,8 +11,8 @@
 
 import os
 
-player1 = raw_input("Player 1, please enter your move: ")
-player2 = raw_input("Player 2, please enter your move: ")
+player1 = input("Player 1, please enter your move: ")
+player2 = input("Player 2, please enter your move: ")
 move_list = ["rock", "scissors", "paper"]
 
 if player1 in move_list and player2 in move_list:
@@ -31,7 +31,7 @@ if player1 in move_list and player2 in move_list:
 else:
 	print ("Bad input, please enter rock, scissors or paper")
 
-restart = raw_input("Want to play again?(y/n) ")
+restart = input("Want to play again?(y/n) ")
 if restart == str("y"):
 	os.system("python 08_rock_paper_scissors.py 1")
 

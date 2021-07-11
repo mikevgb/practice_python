@@ -27,7 +27,7 @@ birthdays = {
 print("Welcome to the birthday dictionary. We know the birthdays of:")
 print('\n'.join(birthdays.keys()))
 
-user_input = raw_input("Who's birthday do you want to look up? ")
+user_input = input("Who's birthday do you want to look up? ")
 
 for i in birthdays:
 	if i == user_input:

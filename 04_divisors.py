@@ -4,7 +4,7 @@
 # number that divides evenly into another number. For example, 13 is a divisor 
 # of 26 because 26 / 13 has no remainder.)
 
-num = int(raw_input("Please, enter a number: "))
+num = int(input("Please, enter a number: "))
 x = range(1, num)
 
 for elem in x:

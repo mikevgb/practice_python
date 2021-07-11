@@ -15,7 +15,7 @@
 
 a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 lista = []
-num = int(raw_input("Please, enter a number: "))
+num = int(input("Please, enter a number: "))
 
 for number in a:
 	if number < num:

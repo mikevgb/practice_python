@@ -40,7 +40,7 @@ if __name__=="__main__":
 	my_num = str(random.randint(1000, 9999))
 	print (my_num)
 	while True:
-		input_number = raw_input("Enter a number: ")
+		input_number = input("Enter a number: ")
 		counter2 = comp(input_number, my_num)
 		print(str(counter2[1]) + " cows, " + str(counter2[0]) + " bulls")
 		if my_num == input_number:

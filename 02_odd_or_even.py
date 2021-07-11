@@ -9,8 +9,8 @@
 # number to divide by (check). If check divides evenly into num, tell that 
 # to the user. If not, print a different appropriate message.
 
-num = int(raw_input("Please, enter the first number: "))
-check = int(raw_input("Please, enter the second number: "))
+num = int(input("Please, enter the first number: "))
+check = int(input("Please, enter the second number: "))
 
 if (num % check) == 0:
 	print("First and second num divide evenly into num")

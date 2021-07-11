@@ -5,7 +5,7 @@
 # normally takes care of for us. All you need is some variables and if 
 # statements!
 
-user_input = raw_input(" Please enter the numbers: ")
+user_input = input(" Please enter the numbers: ")
 a, b, c = user_input.split()
 
 def check_values(a, b, c):

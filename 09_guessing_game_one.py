@@ -15,7 +15,7 @@ import os
 
 while True:
 	random_num = random.randint(1,9)
-	user_input = raw_input("Please, enter a number between 1 and 9: ")
+	user_input = input("Please, enter a number between 1 and 9: ")
 	if user_input == str("exit"):
 		exit()
 	if int(user_input) > random_num:

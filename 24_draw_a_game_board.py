@@ -22,7 +22,7 @@
 
 #   print("Thing to show on screen")
 
-input_size = int(raw_input("Please, enter the size of the board: "))
+input_size = int(input("Please, enter the size of the board: "))
 
 def line1 (input_size):
 	return (" ---" * input_size + " \n")

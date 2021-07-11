@@ -13,9 +13,9 @@
 import time
 
 i = 0
-name = raw_input("Please, enter your name: ")
-age = int(raw_input("Please, enter your age: "))
-many = int(raw_input("How many times would you like to print? "))
+name = input("Please, enter your name: ")
+age = int(input("Please, enter your age: "))
+many = int(input("How many times would you like to print? "))
 year = int(time.strftime("%Y"))
 left_to_100 = int(100 - age)
 total_age = year + left_to_100
