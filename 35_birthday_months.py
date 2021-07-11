@@ -14,7 +14,7 @@
 import json
 import datetime
 
-from collections import Counter
+import collections
 
 with open("35.json") as file_js:
 	data = json.load(file_js)
@@ -47,6 +47,6 @@ while x < len(raw_birthday):
 	letter_month.append(month)
 	x += 1
 
-print Counter(letter_month)
+print (collections.Counter(letter_month))
 
 

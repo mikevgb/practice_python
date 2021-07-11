@@ -12,6 +12,7 @@
 
 # need to import at least 3 things to make your
 # bokeh plots work
+
 from bokeh.plotting import figure, show, output_file
 import json
 import datetime
@@ -20,12 +21,6 @@ import re
 
 with open("35.json") as file_js:
 	data = json.load(file_js)
-
-print("--------------------------------")
-for i in data['important_people']:
-		print("Name: " + i['name'])
-		print("Birthday: " + i['birthday'])
-		print("--------------------------------")
 
 #extract data from raw imported json
 raw_birthday = []
@@ -49,25 +44,26 @@ while x < len(raw_birthday):
 	letter_month.append(month)
 	x += 1
 
-# print (collections.Counter(letter_month))
-typeVariable = type(letter_month)
-print('comparison',typeVariable == list)
-
-pre_plot = [collections.Counter(letter_month)]
-
-# pre_plot = re.findall(r'([+-]?\d+(?:\.\d+)?(?:[eE][+-]\d+)?)', pre_plot)
-print (pre_plot)
-
-# typeVariable = type(pre_plot)
+#####
+# typeVariable = type(letter_month)
 # print('comparison',typeVariable == list)
+#####
 
+#count elements
+counter_elements = collections.Counter(letter_month)
 
-# output_file("36_plot.html")
-# x_categories = ["a", "b", "c", "d", "e"]
-# x = ["a", "d", "e"]
-# y = [4, 5, 6]
+#clean list of dupes
+duped_letter_month = list(set(letter_month))
 
-# p = figure(x_range=x_categories)
-# p.vbar(x=x, top=y, width=0.5)
+months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+          'August', 'September', 'October', 'November', 'December']
 
-# show(p)
+output_file("36_plot.html")
+x_categories = months
+x = duped_letter_month
+y = list(counter_elements.values())
+
+p = figure(x_range=x_categories)
+p.vbar(x=x, top=y, width=0.5)
+
+show(p)

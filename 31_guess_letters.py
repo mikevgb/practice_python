@@ -44,7 +44,7 @@ if __name__=="__main__":
 	print(' '.join(user_word))
 	print("Welcome to hangman")
 	while True:
-		user_input = raw_input("Guess your letter: ")
+		user_input = input("Guess your letter: ")
 		x = -1
 		for i in split_word:
 			x += 1

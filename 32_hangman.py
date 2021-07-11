@@ -53,7 +53,7 @@ if __name__=="__main__":
 	print(' '.join(user_word))
 	print("Welcome to hangman")
 	while playing:
-		user_input = raw_input("Guess your letter: ")
+		user_input = input("Guess your letter: ")
 		user_trys -= 1
 		x = -1
 		for i in split_word:
@@ -67,7 +67,7 @@ if __name__=="__main__":
 						break
 		if user_trys == 0:
 			print ("You lose!")
-			play_again = raw_input("Want to play again? (Yes) ")
+			play_again = input("Want to play again? (Yes) ")
 			if play_again == "Yes":
 				user_trys = 6
 				user_word = user_word_init(len_split)
